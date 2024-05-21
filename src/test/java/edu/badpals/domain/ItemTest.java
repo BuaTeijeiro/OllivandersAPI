@@ -17,9 +17,9 @@ public class ItemTest {
     public void mapping_item(){
         Item item = em.find(Item.class, 2);
         assertNotNull(item);
-        assertEquals("Aged Brie", item.getNombre());
+        assertEquals("Aged Brie", item.getName());
         assertEquals(2, item.getQuality());
-        assertEquals(0, item.getSell_in());
+        assertEquals(0, item.getSellIn());
         assertEquals("AGED BRIE", item.getTipo());
     }
 

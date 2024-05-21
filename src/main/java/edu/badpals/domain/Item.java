@@ -14,13 +14,13 @@ public class Item extends PanacheEntityBase{
     int id;
 
     @Column(name="NOMBRE")
-    String nombre;
+    String name;
 
     @Column(name="QUALITY")
     int quality;
 
     @Column(name="SELL_IN")
-    int sell_in;
+    int sellIn;
 
     @Column(name="TIPO")
     String tipo;
@@ -29,9 +29,9 @@ public class Item extends PanacheEntityBase{
     }
 
     public Item(String nombre, int quality, int sell_in, String tipo) {
-        this.nombre = nombre;
+        this.name = nombre;
         this.quality = quality;
-        this.sell_in = sell_in;
+        this.sellIn = sell_in;
         this.tipo = tipo;
     }
 
@@ -43,12 +43,12 @@ public class Item extends PanacheEntityBase{
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getName() {
+        return name;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setName(String nombre) {
+        this.name = nombre;
     }
 
     public int getQuality() {
@@ -59,12 +59,12 @@ public class Item extends PanacheEntityBase{
         this.quality = quality;
     }
 
-    public int getSell_in() {
-        return sell_in;
+    public int getSellIn() {
+        return sellIn;
     }
 
-    public void setSell_in(int sell_in) {
-        this.sell_in = sell_in;
+    public void setSellIn(int sell_in) {
+        this.sellIn = sell_in;
     }
 
     public String getTipo() {
