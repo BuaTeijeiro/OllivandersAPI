@@ -1,5 +1,7 @@
 package edu.badpals.domain;
 
+import java.util.List;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
@@ -21,6 +23,12 @@ public class ItemTest {
         assertEquals(2, item.getQuality());
         assertEquals(0, item.getSellIn());
         assertEquals("AGED BRIE", item.getTipo());
+    }
+
+    @Test
+    public void getAllTest(){
+        List<Item> items =  Item.getAllItems();
+        assertEquals(9, items.size());
     }
 
 }

@@ -5,6 +5,7 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import java.util.List;
 
 @Entity
 @Table(name="T_ITEMS")
@@ -74,5 +75,9 @@ public class Item extends PanacheEntityBase{
     public void setTipo(String tipo) {
         this.tipo = tipo;
     };
+
+    public static List<Item> getAllItems(){
+        return Item.listAll();
+    }
 
 }
