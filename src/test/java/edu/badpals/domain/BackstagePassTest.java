@@ -2,8 +2,11 @@ package edu.badpals.domain;
 
 import org.junit.jupiter.api.Test;
 
+import io.quarkus.test.junit.QuarkusTest;
+
 import static org.junit.jupiter.api.Assertions.*;
 
+@QuarkusTest
 class BackstagePassTest {
     @Test
     public void BackstagePassGetters(){
