@@ -22,9 +22,9 @@ VALUES
 ("Elixir of the Mongoose", 5, 7,"NORMAL"),
 ("Sulfuras, Hand of Ragnaros", 80, 0,"SULFURAS"),
 ("Sulfuras, Hand of Ragnaros", 80, -1,"SULFURAS"),
-("Backstage passes to a TAFKAL80ETC concert", 15, 20,"BACKSTAGE PASS"),
-("Backstage passes to a TAFKAL80ETC concert", 10, 49,"BACKSTAGE PASS"),
-("Backstage passes to a TAFKAL80ETC concert", 5, 49,"BACKSTAGE PASS"),
+("Backstage passes to a TAFKAL80ETC concert", 20, 15,"BACKSTAGE PASS"),
+("Backstage passes to a TAFKAL80ETC concert", 49, 10,"BACKSTAGE PASS"),
+("Backstage passes to a TAFKAL80ETC concert", 49, 6,"BACKSTAGE PASS"),
 ("Conjured Mana Cake", 3, 6,"CONJURED");
 
 SELECT * FROM OLLIVANDERS_TEST.T_ITEMS;

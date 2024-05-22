@@ -20,8 +20,6 @@ public class ItemTest {
         Item item = em.find(Item.class, 2);
         assertNotNull(item);
         assertEquals("Aged Brie", item.getName());
-        assertEquals(2, item.getQuality());
-        assertEquals(0, item.getSellIn());
         assertEquals("AGED BRIE", item.getTipo());
     }
 

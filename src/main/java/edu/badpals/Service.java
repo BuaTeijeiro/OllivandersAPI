@@ -8,6 +8,7 @@ import java.util.List;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
 
 @ApplicationScoped
 public class Service {
@@ -17,6 +18,7 @@ public class Service {
 
     Service(){}
 
+    @Transactional
     public void updateDatabase(){
         GildedRose shop = new GildedRose();
         List<Item> items = Item.getAllItems();
