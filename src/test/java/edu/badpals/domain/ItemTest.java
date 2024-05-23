@@ -4,6 +4,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
@@ -33,6 +34,24 @@ public class ItemTest {
     public void getItemsByNameTest_OneItem(){
         List<Item> items = Item.getItemsByName("Aged Brie");
         assertEquals(1, items.size());
+    }
+
+    @Test
+    public void getItemsByNameTest_OneItem_WrongCase(){
+        List<Item> items = Item.getItemsByName("aged brie");
+        assertEquals(1, items.size());
+    }
+
+    @Test
+    public void getItemsByNameTest_SeveralItems(){
+        List<Item> items = Item.getItemsByName("Backstage passes to a TAFKAL80ETC concert");
+        assertEquals(3, items.size());
+    }
+
+    @Test
+    public void getItemsByNameTest_NoItem(){
+        List<Item> items = Item.getItemsByName("Nitrogeno Liquido");
+        assertTrue(items.isEmpty());
     }
 
 }
