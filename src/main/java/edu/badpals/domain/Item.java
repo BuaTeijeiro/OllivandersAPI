@@ -80,4 +80,11 @@ public class Item extends PanacheEntityBase{
         return Item.listAll();
     }
 
+    public static List<Item> getItemsByName(String name) {
+        return Item.getAllItems()
+                .stream()
+                .filter(o -> o.getName().equalsIgnoreCase(name))
+                .toList();
+    }
+
 }

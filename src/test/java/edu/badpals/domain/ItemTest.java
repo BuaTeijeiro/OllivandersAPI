@@ -26,7 +26,13 @@ public class ItemTest {
     @Test
     public void getAllTest(){
         List<Item> items =  Item.getAllItems();
-        assertEquals(9, items.size());
+        assertEquals(Item.count(), items.size());
+    }
+
+    @Test
+    public void getItemsByNameTest_OneItem(){
+        List<Item> items = Item.getItemsByName("Aged Brie");
+        assertEquals(1, items.size());
     }
 
 }
