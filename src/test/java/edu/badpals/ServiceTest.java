@@ -38,4 +38,14 @@ public class ServiceTest {
         servicio.createItem("Magic Pasta",10, 25, "NORMAL");
         assertEquals(initialItemCount + 1, Item.count());
     }
+
+    @Test
+    @Transactional
+    void createAndUpdateItemTest(){
+        servicio.createItem("Magic Pasta",10, 25, "NORMAL");
+        servicio.updateDatabase();
+        Item item = Item.getAllItems().getLast();
+        assertEquals(9, item.getSellIn());
+        assertEquals(24, item.getQuality());
+    }
 }
