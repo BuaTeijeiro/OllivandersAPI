@@ -27,4 +27,14 @@ public class Service {
         }
         shop.updateItems();
     }
+
+    @Transactional 
+    void createItem(String name, int sell_in, int quality, String tipo){
+        Item newItem = new Item(name, sell_in, quality, tipo);
+        newItem.persist();
+    }
+
+    public void delete(Item item) {
+        item.delete();
+    }
 }
