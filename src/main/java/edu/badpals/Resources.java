@@ -16,8 +16,9 @@ public class Resources {
     @GET
     @Path("/updateStock")
     @Transactional
-    public void updateStock(){
+    public String updateStock(){
         service.updateDatabase();
+        return "Accion llevada a cabo correctamente";
     }
 
 }
