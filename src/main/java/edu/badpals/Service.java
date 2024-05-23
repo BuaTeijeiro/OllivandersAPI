@@ -33,4 +33,8 @@ public class Service {
         Item newItem = new Item(name, sell_in, quality, tipo);
         newItem.persist();
     }
+
+    public void delete(Item item) {
+        item.delete();
+    }
 }

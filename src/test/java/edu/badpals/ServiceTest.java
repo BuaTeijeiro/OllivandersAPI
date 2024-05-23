@@ -48,4 +48,16 @@ public class ServiceTest {
         assertEquals(9, item.getSellIn());
         assertEquals(24, item.getQuality());
     }
+
+    @Test
+    @Transactional
+    void deleteItemTest(){
+        long initialItemCount = Item.count();
+        servicio.createItem("Magic Pasta",10, 25, "NORMAL");
+        assertEquals(initialItemCount + 1, Item.count());
+        Item item = Item.getAllItems().getLast();
+        servicio.delete(item);
+        assertEquals(initialItemCount, Item.count());
+
+    }
 }
